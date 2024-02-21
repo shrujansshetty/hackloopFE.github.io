@@ -1,0 +1,257 @@
+:root {
+    --background-color-light: #ffffff;
+    --text-color-light: #333333;
+    --background-color-dark: #1e1e1e;
+    --text-color-dark: #ffffff;
+}
+
+body {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    max-height: 100vh;
+}
+.twitter-tweet.dark-mode{
+    background-color: #2196F3;
+    color: red;
+}
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+header {
+    background-color: #bff04d;
+    padding: 15px 0;
+    text-align: center;
+    color: rgb(0, 119, 255);
+    max-height: 10%;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+body.dark-mode header {
+    background-color: #414141;
+    padding: 15px 0;
+    text-align: center;
+    color: #bff04d;
+}
+
+nav {
+    background-color: #000000;
+    overflow: hidden;
+    color: white;
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 10%;
+    padding: 0;
+}
+
+nav a {
+    margin: 0;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    margin: 0; 
+    background-color: #fffdfd;
+    color: black;
+}
+
+.search-container {
+    text-align: center;
+    padding: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #ffffff;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0;
+    z-index: 100;
+}
+
+/* Social icons styles */
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #000000;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+/* Icon styles (Font Awesome) */
+.social-icons li a i {
+    font-size: 18px;
+}
+
+footer img {
+    margin-left: 0.4em;
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+}
+
+footer img:hover {
+    box-shadow: 0 10px 17px rgb(161, 238, 61);
+    transform: scale(1.05);
+}
+
+footer a {
+    font-size: 1.2em;
+    color: rgb(183, 247, 183);
+    line-height: 1.7em;
+}
+
+/* Styling for the theme toggle slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    margin-top: 1em;
+    margin-right: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1em;
+    width: 1em;
+    left: 0.0em;
+    bottom: 0px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(1em);
+    -ms-transform: translateX(1em);
+    transform: translateX(1em);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/* there are some errors in the main class so i have not used it for now */
+.main {
+    width: 50%;
+    min-height: 200%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    flex-grow: 1;
+}
+
+.main p {
+    line-height: 1.5em;
+    text-align: center;
+    margin-bottom: -1em;
+}
+.active {
+    position: relative;
+    border-top: 3px solid #f39c12; 
+}
+
+.active:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid transparent;
+    border-width: 8px 8px 0 8px; /* Adjust the size of the triangle */
+    border-top-color: #f39c12; /* Change color to your preference */
+}

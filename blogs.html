@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruthTrackerHub | Blogs</title>
+    <style>
+        h2 {
+            margin: 2em 2em 0 0;
+            text-decoration: underline 2px;
+            color: rgb(0, 174, 218);
+        }
+.existing h2{
+    color: brown;
+}
+.new h2{
+    color: brown;
+ 
+}
+        #left {
+    width: 80%;
+    padding: 2em;
+    overflow-y: auto; /* Use 'auto' instead of 'scroll' */
+    scrollbar-color: #333 #f0f0f0; /* Firefox scrollbar color */
+    scrollbar-width: thin; /* Firefox scrollbar width */
+    max-height: 70vh; /* Added to limit the maximum height and allow scrolling */
+}
+
+        #right {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            scrollbar-color: #333 #f0f0f0; /* Firefox scrollbar color */
+    scrollbar-width: thin; /* Firefox scrollbar width */
+            max-height: 70vh;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            margin-top: 7em;
+        }
+
+        #submit-form {
+            margin-left: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #article-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #article-form label,
+        #article-form textarea,
+        #article-form button {
+            margin-bottom: 1em;
+        }
+
+        @media screen and (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            #left,
+            #right {
+                width: 100%;
+                left: 0;
+                right: 0;
+            }
+        }
+        p{
+            word-spacing: 3px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        
+/* For WebKit browsers like Chrome and Safari */
+main::-webkit-scrollbar {
+    width: 12px; /* Adjust the width as needed */
+}
+
+main ::-webkit-scrollbar-thumb {
+    background-color: #333; /* Color of the scrollbar thumb */
+}
+
+main ::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Color of the scrollbar track */
+}
+.btn {
+    width: max-content;
+padding: 10px;
+    background: rgb(119, 0, 0);
+    border: 2px solid white;
+    outline: none;
+    border-radius: 60px;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: black;
+    box-shadow: none;
+}
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>TruthTrackerHub</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="trending.html">Latest News</a>
+        <a href="quiz.html">Quiz</a>
+        <a class="active" href="blogs.html">Blogs</a>
+        <div style="float:right">
+            Dark Theme
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Existing articles here -->
+        <div id="left">
+            <h2 style="font-size: 28px;">Related Blogs : </h2>
+            <div class="new"></div>
+            <div class="existing">
+            <h2>Fake news and social media</h2>
+            <p>Published on: 16/02/2024</p>
+            <p>Though Social media has become almost an inevitable part of our society now, we can’t always depend on
+                it. The spreading of misinformation in social media is not new. Every day we read bunches of things
+                online on social media, which may happen to be true, often is not. This false or misinformation leads to
+                fake news i.e. consisted of fabricated stories, without any verifiable facts, sources, or quotes. Those
+                stories are forged to influence reader’s own opinions or to deceive them. The question of fake news
+                refers to the point of how to think about the nature of real news. In the last few years, numbers of
+                fake news stories have increased via social media platforms like What’s App, Facebook, YouTube, etc.,
+                because they are shared online faster than we can ever imagine. There have been varied uses of the term
+                Fake news in different reporting of news. During the second half of 2016, the term was searched
+                tremendously by people shown in a Google Trends Map.
+
+                Most of the time Fake news conflates three different notions: misinformation, disinformation, and mal
+                -information. Misinformations are false information, but when a person conveys it, believes that it is
+                true and shares. Disinformation is those which are shared intentionally by a person after knowing that
+                it is true. On the other hand, information based on reality but imposes harm on a person, organization,
+                or country is termed as mal -information. After putting all of them together, we call it fake news.</p>
+
+            <h2>Sharing fake news</h2>
+            <p>Published on: 10/02/2024</p>
+            <p>Are we given enough contemplation before sharing information? Is it fake or real? Are we looking at an
+                original piece of content? When and who created this content? Why is the content being shared? Why
+                should we share it?
+
+                No, usually people never give a second thought before sharing content on social media. After receiving
+                content like violent video clips, images, memes, etc. people forget to verify about fake or real. It
+                happens because at that moment the only thing that triggers on people’s minds is to let the people know
+                about the content and its consequences. There are very few different cases with some, who inquire ” is
+                the content fake?”
+
+                However, here the problem lies with the human mind and the fake news. Our brains have a limited
+                capability for processing information and for remembering, so the brain makes judgments on what to keep.
+                Looking into that fact, the contents which are more familiar to people, or it has an impact on people
+                due to some previous personal issues are especially shared in social media. Certainly, at that moment
+                the brain can recall the previous effect of that content and without giving a second thought frequently
+                passes the judgments.</p>
+            <!-- Dynamically added articles will go here -->
+        </div>
+            
+        </div>
+        <!-- Form for user submission -->
+        <div id="right">
+            <section id="submit-form">
+                <h2>Submit Your Article</h2><br>
+                <form id="article-form" onsubmit="return validateForm()">
+                    <label for="title">Title:</label><br>
+                    <input type="text" id="title" name="title" required>
+                    <br><br>
+                    <label for="content">Content:</label><br>
+                    <textarea id="content" name="content" rows="10" required></textarea>
+                    <br><br>
+                    <button class="btn" type="submit" >Submit</button>
+                </form>
+            </section><br>
+            <button class="btn"  onclick="deleteAllArticles()">Delete All My Articles</button>
+        </div>
+    </main>
+
+    <script src="blogscript.js"></script>
+    <script src="commonscript.js"></script>
+    <footer>
+        <br>
+        <a href="#"><img src="github.png"></a>
+        <a href="#"><img src="linkedin.png"></a>
+        <a href="#"><img src="twitter.png"></a>
+        <a href="#"><img src="insta.jpeg"></a>
+        <p><a href="#terms">Terms and Conditions</a></p>
+    </footer>
+
+</body>
+
+</html>
