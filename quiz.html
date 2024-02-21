@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="quizstyle.css">
         <style>
-         .popup-info, .home{
+    
+.container{
     overflow-y: scroll; /* Enable vertical scrollbar */
     scrollbar-color: #333 #f0f0f0; /* Firefox scrollbar color */
     scrollbar-width: thin; /* Firefox scrollbar width */
 }
 
 /* For WebKit browsers like Chrome and Safari */
-.popup-info, .home::-webkit-scrollbar {
+
+.container::-webkit-scrollbar {
     width: 12px; /* Adjust the width as needed */
 }
 
-.popup-info, .home::-webkit-scrollbar-thumb {
+.container::-webkit-scrollbar-thumb {
     background-color: #333; /* Color of the scrollbar thumb */
 }
 
-.popup-info, .home::-webkit-scrollbar-track {
+.container::-webkit-scrollbar-track {
     background-color: #f0f0f0; /* Color of the scrollbar track */
 }
     </style>
@@ -99,7 +101,7 @@
             </section>
         </div>
     
-    <div class="popup-info">
+    <div class="popup-info" style="z-index=999999">
         <h2>Quiz Guide</h2>
         <span class="info">1. This quiz contains 5 questions.</span>
         <span class="info">2. Select the your answer for each questions.</span>
